@@ -11,6 +11,7 @@ namespace AnasShop4204
     {
         public static string? name;
         public static int balance = 100;
+        //starting balance for user (can add more)
         static void Main(string[] args)
         {   //welcoming message + users input for name
             Console.WriteLine("Hello! Welcome to Ana's Shop.");
@@ -60,6 +61,7 @@ namespace AnasShop4204
                     Console.Clear();
                     int price1 = 15;
                     int price2 = 12;
+                    //sub-categories, used for each category
                     Console.WriteLine("*********************************************************");
                     Console.WriteLine("Welcome");
                     Console.WriteLine("Pick an option below to purchase a Plush Toy");
@@ -73,7 +75,8 @@ namespace AnasShop4204
 
                     switch (Console.ReadLine())
                     {
-                        case "c":
+                        case "c":   //subtracting chosen produce from balance + if balance is less than product price
+                                    //used for each case/category
                             if (balance >= price2)
                             {
                                 Console.WriteLine("Thank you for your purchase!");
@@ -148,7 +151,7 @@ namespace AnasShop4204
                                 Menu();
                             }
                             break;
-                            
+                           //deafault for all switch statements 
                         default:
                             Console.WriteLine("Sorry, invaild option please try again");
                             Menu();
@@ -359,6 +362,7 @@ namespace AnasShop4204
                     }
                  break; //end of category three
 
+                    //the ability to exit the program
                 case "e":
                     Environment.Exit(0);
                     break;
@@ -367,7 +371,8 @@ namespace AnasShop4204
                     Console.WriteLine("Sorry, invaild option please try again");
                     Menu();
                     break;
-            } 
+
+            } //completed program/end of program
         }
 
         
